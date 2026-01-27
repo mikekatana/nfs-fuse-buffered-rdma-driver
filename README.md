@@ -31,6 +31,7 @@ Ensure link is up using ibstat
 ## Check that all relevant modules are being loaded
 
 #lsmod
+```
 Module                  Size  Used by
 nfsv3                  61440  1
 nfs_acl                12288  1 nfsv3
@@ -131,11 +132,14 @@ ib_core               524288  9 rdma_cm,ib_ipoib,rpcrdma,iw_cm,ib_umad,rdma_ucm,
 hid_generic            12288  0
 usbhid                 77824  0
 hid                   180224  2 usbhid,hid_generic
-
-# Install FUSE dependencies
-sudo apt install build-essential cmake libfuse3-dev libnfs-dev pkg-config
-
-
-
 mlx5_core            2809856  1 mlx5_ib
 mlxfw                  36864  1 mlx5_core
+```
+
+# Install FUSE dependencies
+```
+sudo apt install build-essential cmake libfuse3-dev libnfs-dev pkg-config
+```
+
+
+
