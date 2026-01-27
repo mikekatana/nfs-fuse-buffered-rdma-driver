@@ -7,6 +7,8 @@ sudo apt-get install rdma-core libibverbs1 ibverbs-providers librdmacm1
 Ensure link is up using ibstat
 
 ##ibstat
+
+```
 `CA 'mlx5_0'
         CA type: MT4125
         Number of ports: 1
@@ -23,7 +25,8 @@ Ensure link is up using ibstat
                 SM lid: 0
                 Capability mask: 0x00010000
                 Port GUID: 0x5aa2e1fffee07c20
-                Link layer: Ethernet`
+                Link layer: Ethernet
+```
 
 ## Check that all relevant modules are being loaded
 
