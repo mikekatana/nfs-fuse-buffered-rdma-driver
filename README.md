@@ -2,7 +2,9 @@
 
 ## Install IB Dependencies
 
+```
 sudo apt-get install rdma-core libibverbs1 ibverbs-providers librdmacm1
+```
 
 Ensure link is up using ibstat
 
