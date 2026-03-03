@@ -142,6 +142,15 @@ mlxfw                  36864  1 mlx5_core
 ```
 sudo apt install build-essential cmake libfuse3-dev libnfs-dev pkg-config
 ```
+# How to build
 
+- clone the repository
+
+Compile the Client
+sudo gcc -o nfs_rdma_client_tuned nfs_rdma_client_tuned.c $(pkg-config --cflags --libs fuse3 libnfs) -lpthread -O3 -march=native -Wall
+
+#Run the FUSE Client with RDMA (--proto options are tcp and rdma)
+export NFS_URL="nfs://192.168.60.10/nfs_o_rdma"
+LD_PRELOAD=/usr/lib/x86_64-linux-gnu/rsocket/librspreload.so ./nfs_rdma_client_tuned /mnt/nfs_o_rdma --proto rdma
 
 
